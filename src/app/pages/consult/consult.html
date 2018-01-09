@@ -4,18 +4,18 @@
   </p>
   <div class="form">
     <div class="row exhibition">
-      <div class="col">
+      <div class="col1">
         <p>联系方式：</p>
         <p>
           <span>{{contact.phoneNum}}</span>
           <span>（手机）</span>
         </p>
       </div>
-      <div class="col">
+      <div class="col1">
         <p>类别：</p>
         <p>注册公司</p>
       </div>
-      <div class="col">
+      <div class="col1">
         <p>负责人：</p>
         <p>{{opportunity.bizUserName}}</p>
       </div>
@@ -29,7 +29,7 @@
       <div class="tab-content">
         <div class="active form-row">
           <div class="row operation">
-            <div class="col">
+            <div class="col1">
               <div class="left left-4">主营行业</div>
               <div class="right-4">
                 <nz-select
@@ -43,7 +43,7 @@
                 </nz-select>
               </div>
             </div>
-            <div class="col">
+            <div class="col1">
               <div class="left left-4">注册区域</div>
               <div class="right-4">
                 <nz-select
@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="row full">
-            <div class="col">
+            <div class="col1">
               <div class="left left-4">主营范围</div>
               <div class="right-4">
                 <nz-select
@@ -75,7 +75,7 @@
             </div>
           </div>
           <div class="row full">
-            <div class="col">
+            <div class="col1">
               <div class="left left-7">行业资质许可证</div>
               <div class="right-7">
                 <nz-select
@@ -91,7 +91,7 @@
             </div>
           </div>
           <div class="row operation">
-            <div class="col">
+            <div class="col1">
               <div class="left left-4">企业类别</div>
               <div class="right-4">
                 <nz-select
@@ -105,7 +105,7 @@
                 </nz-select>
               </div>
             </div>
-            <div class="col">
+            <div class="col1">
               <div class="left left-4">组织形式</div>
               <div class="right-4">
                 <nz-select
@@ -121,7 +121,7 @@
             </div>
           </div>
           <div class="row operation">
-            <div class="col">
+            <div class="col1">
               <div class="left left-9">有效年营业额（万）</div>
               <div class="right-9">
                 <nz-input-number style="width: 100%" [(ngModel)]="bizProductSearch.p7" [nzPlaceHolder]="'请输入有效年营业额'" [nzMin]="0" [nzStep]="0.1"></nz-input-number>
@@ -156,7 +156,7 @@
 </div>
 <div class="content twocontent form-row">
   <div class="row operation">
-    <div class="col">
+    <div class="col1">
       <div class="left left-5">客户签订人</div>
       <div class="right-5">
         <nz-select
@@ -170,7 +170,7 @@
         </nz-select>
       </div>
     </div>
-    <div class="col">
+    <div class="col1">
       <div class="left left-5">服务公司</div>
       <div class="right-5">
         <nz-select
@@ -186,7 +186,7 @@
     </div>
   </div>
   <div class="row operation">
-    <div class="col">
+    <div class="col1">
       <div class="left left-5">我方签订人</div>
       <div class="right-5">
         <nz-input style="width: 100%" [(ngModel)]="signName" [nzDisabled] = true></nz-input>
@@ -194,10 +194,10 @@
     </div>
   </div>
   <div class="row text-box">
-    <div class="col">
+    <div class="col1">
       <div class="left">合同备注</div>
     </div>
-    <div class="col">
+    <div class="col1">
       <div class="textarea-div">
         <nz-input [(ngModel)]="contract.remark" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="''"></nz-input>
       </div>
