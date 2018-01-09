@@ -11,4 +11,4 @@ RUN git clone https://github.com/chenjian122/biz_pad.git /var/www \
 EXPOSE 3000
 
 WORKDIR /var/www
-ENTRYPOINT ["npm", "run", "start:prod"]
+ENTRYPOINT ["npm", "run", "start"]
