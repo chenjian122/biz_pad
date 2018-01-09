@@ -12,5 +12,4 @@ RUN npm install --global rimraf \
 
 EXPOSE 3000
 
-WORKDIR /var/www
 ENTRYPOINT ["npm", "run", "start"]
