@@ -11,7 +11,6 @@
     "start:aot": "ng serve --aot",
     "start:prod": "ng serve --prod",
     "start:prod:aot": "ng serve --port 3000  --host 0.0.0.0 --proxy-config proxy.conf.json --prod --aot",
-    "build": "npm run clean:dist && ng build",
     "build": "npm run clean:dist && ng build --no-extract-license ",
     "build:prod": "npm run build -- --prod",
     "build:prod:aot": "npm run build:prod -- --aot",
