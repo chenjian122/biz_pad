@@ -1,0 +1,48 @@
+<div class="auth-main">
+  <img class="backgroundimg" src="/assets/img/bg.png"/>
+  <div class="middle-div">
+  <img class="login-logo" src="/assets/img/logo.png" />
+  <div class="auth-block">
+    <h1 translate></h1>
+    <div style="width: 400px;margin-bottom: 10px">
+      <nz-alert [nzType]="'error'" *ngIf="nzShow">
+        <span alert-body>
+          <pre>{{nzMessage}}</pre>
+        </span>
+      </nz-alert>
+
+    </div>
+
+    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="onSubmit(validateForm.value)">
+      <div nz-form-item>
+        <div nz-form-control [nzValidateStatus]="validateForm.controls.userCode">
+          <nz-input formControlName="userCode" [nzPlaceHolder]="'用户名'" [nzSize]="'large'">
+            <ng-template #prefix>
+              <i class="anticon anticon-user"></i>
+            </ng-template>
+          </nz-input>
+          <div nz-form-explain *ngIf="validateForm.controls.userCode.dirty&&validateForm.controls.userCode.hasError('required')">请输入用户名</div>
+        </div>
+      </div>
+      <div nz-form-item>
+        <div nz-form-control [nzValidateStatus]="validateForm.controls.password">
+          <nz-input formControlName="password" [nzType]="'password'" [nzPlaceHolder]="'密码'" [nzSize]="'large'">
+            <ng-template #prefix>
+              <i class="anticon anticon-lock"></i>
+            </ng-template>
+          </nz-input>
+          <div nz-form-explain *ngIf="validateForm.controls.password.dirty&&validateForm.controls.password.hasError('required')">请输入密码</div>
+        </div>
+      </div>
+      <div nz-form-item>
+        <div nz-form-control>
+          <label nz-checkbox formControlName="remember">
+            <span>记住密码</span>
+          </label>
+          <button nz-button class="login-form-button" [nzType]="'primary'" [nzSize]="'large'">登录</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.backgroundimg{
+	height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.login-logo{
+	margin: 10% auto;
+	display: block;
+	position: relative;
+}
+.middle-div{
+	margin: 0 auto;
+	padding: 32px;
+	z-index: 1;
+}
+
+.login-form-forgot {
+	float: right;
+}
+
+.login-form-button {
+	width: 100%;
+}

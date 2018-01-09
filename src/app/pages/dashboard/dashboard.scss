@@ -1,0 +1,559 @@
+html, body {
+	width: 100%;
+	background-color: #f1f1f1;
+}
+div, body, span, p, img, input, button{
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+    color: #555555;
+    font-size: 16px;
+}
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header{
+	background-color: #b70005;
+	padding: 0 1.75rem;
+	height: 5.875rem;
+}
+header>div:nth-child(1){
+	float: left;
+}
+header>div:nth-child(2){
+	float: right;
+}
+header>div:nth-child(1) img{
+	margin-top: 1.375rem;
+}
+header>div:nth-child(2) img{
+	vertical-align: top;
+}
+header>div:nth-child(2) a:nth-child(1) img{
+	margin-top: 1.85rem;
+}
+header>div:nth-child(2) a:nth-child(2) img{
+	margin: 2.45rem 0.875rem 0;
+}
+header>div:nth-child(2) a:nth-child(3) img{
+	margin-top: 2.5rem;
+}
+.content{
+	width: 78%;
+	margin: 1rem auto;
+	background-color: #fff;
+	padding:1.25rem 0 1rem 1.375rem;
+	box-sizing: border-box;
+}
+.name{	
+	border-bottom: 0.125rem solid #d4dde5;
+}
+.name span{
+	color: #555555;
+    font-weight: bold;
+    font-family: "宋体";  
+    border-bottom: 0.31rem solid #b70005;
+    padding: 0 0.2rem 0 2rem;
+    display: inline-block;
+    line-height: 2.3rem;
+    height: 2rem;
+    margin-bottom: -0.187rem;
+}
+.name-img span{
+	background: url(/assets/img/nameicon.png) no-repeat center left 0.1rem;
+}
+.book-img span{
+	background: url(/assets/img/book.png) no-repeat center left 0.1rem;
+}
+.main{
+	padding-right:1.375rem;
+	box-sizing: border-box;
+}
+.row{
+	font-size: 0;
+}
+.row .col{
+	display: inline-block;
+	vertical-align: top;
+}
+.exhibition .col{
+	width: 33.33%;
+}
+.operation .col{
+	width: 50%;
+}
+.text-box .col{
+	width: 100%;
+}
+.full .col{
+	width: 100%;
+}
+.exhibition .col p,.exhibition .col p span{
+	line-height: 2rem;
+	font-size: 0.875rem;
+}
+.exhibition .col p:nth-child(1){
+	color: #555555;
+}
+.exhibition .col p:nth-child(2),.exhibition .col p:nth-child(2) span{
+	color: #000;
+}
+.form>.exhibition:first-child{
+	padding-top: 0.625rem;
+}
+.form>.exhibition:last-child{
+	padding-bottom: 0.625rem;
+}
+.tab-title{
+	font-size: 0;
+}
+.tab-title div{
+	font-weight: bold;
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	background-color: #c0c0c0;
+	color: #414141;
+	font-size: 0.875rem;
+	height: 2rem;
+	line-height: 2rem;
+	vertical-align: bottom;
+	border-radius: 0.5rem 0.5rem 0px 0px;
+	border-left: 0.0625rem solid #c9c9c9;
+	box-sizing: border-box;
+}
+.tab-title div:first-child{
+	border-left: 0;
+}
+.tab-title .active{
+	color: #fff;
+	font-size: 1.125rem;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	background-color: #b70005;
+}
+.tab-content{
+	padding: 1.5rem 0 0.75rem;
+	border: 0.0625rem solid #575757;
+	box-shadow: -1px 1px 1px #989898;
+}
+.tab-content>div{
+	display: none;
+}
+.tab-content>.active{
+	display: block;
+}
+.left{
+	float: left;
+    margin-left: 1.5rem;
+    color: #555555;
+}
+.left-1{
+	width: 1.5rem;
+}
+.right-1-1{
+	margin:0 0.5rem 0 1.5rem;
+}
+.left-4{
+	width: 4.5rem;
+}
+.right-4{
+	margin:0 1.5rem 0 6rem;
+}
+.left-5{
+	width: 5.5rem;
+}
+.right-5{
+	margin:0 1.5rem 0 7rem;
+}
+.left-7{
+	width: 7.5rem;
+}
+.right-7{
+	margin:0 1.5rem 0 9rem;
+}
+.left-8{
+	width: 8.5rem;
+}
+.right-8{
+	margin:0 1.5rem 0 10rem;
+}
+.left-9{
+	width: 9.5rem;
+}
+.right-9{
+	margin:0 1.5rem 0 11rem;
+}
+.col div select,.col div input{
+	width: 100%;
+	height: 1.5rem;
+	border: 0.0625rem solid #949494;
+	box-sizing: border-box;
+}
+.col div select{
+	background:url(/assets/img/drow-up.jpg) no-repeat center right #f1f1f1;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	padding:0 2rem 0 0.625rem;
+}
+.col div input{
+	background-color: #f1f1f1;
+	padding-left:0.625rem;
+}
+.col select,.col input{
+	font-size: 0.875rem;
+	color: #000;
+}
+.form-row .row{
+	line-height: 3.125rem;
+}
+.scheme{
+	width: 9.75rem;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	background-color: #b70005;
+	color: #fff;
+	border: 0.0625rem solid #a6a6a6;
+	margin: 1rem auto 0;
+}
+.provide-service{
+	line-height: 2rem;	
+	background: url(/assets/img/provide.png) no-repeat center left;
+	margin: 1rem 0.2rem 0.5rem;
+}
+.provide-service span{
+	font-size: 0.75rem;
+}
+.provide-service .adress{
+	color: #b70005;
+}
+.provide-service .provide{
+	margin-left: 2rem;
+}
+.technol{
+	padding: 0 2rem 0 2.38rem;
+}
+.technol img{
+	width: 100%;
+}
+.adress-icon{
+	background: url(/assets/img/adress.png) no-repeat center left;
+}
+.onecontent{
+    padding: 1.25rem 0 2.5rem 1.375rem;
+}
+.twocontent{
+	padding: 2.2rem 1.375rem 1.25rem;
+}
+.row .col-1-7{
+	width: 17%;
+}
+.row .col-2-0{
+	width: 20%;
+}
+.row .col-2-9{
+	width: 29%;
+}
+.row .col-3-4{
+	width: 34%;
+}
+.row .col-6-2{
+	width: 62%;
+}
+.nesting-first{
+	margin-left: 0;
+}
+.nesting-last{
+	margin: 0 0 0 7.6rem;
+	line-height: 3rem;
+}
+.col div .select-contact{
+	background-color: #b70005;
+	color: #fff;
+	font-size: 0.75rem;
+}
+.col div .select-contact option{
+	background-color: #f1f1f1;
+	color: #000;
+}
+.select-contact option:first-child{
+	display: none;
+}
+.data-div{
+	position: relative;
+	line-height: 2.8rem;
+}
+.col .data-div input{
+	font-size: 0.5rem;
+	padding-left: 0.3rem;
+}
+.data-div img{
+	position: absolute;
+	top: 0.85rem;
+	right: 0;
+	pointer-events:none
+}
+.datanest-one{
+	margin-left: 0.5rem;
+}
+.datanest-two{
+    margin: 0 0.5rem 0 5.5rem;
+}
+.person-charge{
+	color: #a3a2a2;
+}
+.form-row .text-box {
+    line-height: 2.125rem;
+}
+.textarea-div{
+	margin: 0 1.5rem;
+}
+.entrust{
+	height: 3.125rem;
+}
+.contract{
+	height: 4.125rem;
+}
+.textarea-div textarea{
+	width: 100%;
+    background-color: #f1f1f1;
+}
+.col-1-7 a{
+	font-size: 1rem;
+	display: inline-block;
+	margin-right: 0.1rem;
+}
+.col-1-7 a:last-child{
+	margin-right: 0;
+}
+.btn-div{
+	margin: 1rem 1.5rem 0;
+}
+.btn-div .left-btn{
+	height: 2rem;
+	line-height: 2rem;
+	width: 7.125rem;
+	background-color: #006699;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+}
+.btn-div .right-btn{
+	float: right;
+}
+.right-btn button{
+	width: 4.875rem;
+	height: 2rem;
+	margin-left: 0.5rem;
+}
+.right-btn button:first-child{
+	border: 0.1rem solid #b70005;
+	background-color: #fff;
+	color: #333333;
+}
+.right-btn button:last-child{
+	border: 0.1rem solid #b70005;
+	background-color: #b70005;
+	color: #fff;
+}
+
+/*登录*/
+.login{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.login .backgroundimg{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.login-logo{
+	margin: 10% auto 0;
+	display: block;
+	position: relative;
+}
+.login-content{
+	height: 14.5rem;
+	width: 40%;
+	margin: 8% auto 0;
+	background-color: #fff;
+	border-top: 0.188rem solid #b70005;
+	position: relative;
+}
+.login-content>img{
+	position: absolute;
+	top: 0;
+	right: 0;	
+}
+.login-content>div{
+	text-align: center;
+}
+.login-content>div>input,.login-content>div>button{
+	height: 1.8rem;
+	line-height: 1.8rem;
+	width: 75%;
+	border: 0.0625rem solid #b70005;
+}
+.login-content>.username-div input{
+	margin:2.625rem 0 1.5rem;
+	background: url(/assets/img/username.png) no-repeat center left 0.5rem;
+	padding-left: 3rem;
+	box-sizing: border-box;
+}
+.login-content>.password-div input{
+	margin-bottom:2.125rem;
+	background: url(/assets/img/password.png) no-repeat center left 0.5rem;
+	padding-left: 3rem;
+	box-sizing: border-box;
+}
+.login-content>div>button{
+	background-color: #b70005;
+	color: #fff;
+	font-size: 1rem;
+}
+.login-content>p{
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 0.75rem;
+	color: #666666;
+}
+.middle-div{
+	position: absolute;
+	top: 50%;
+	margin-top: -20.5rem;
+	width: 100%;
+}
+
+/*用户列表*/
+.search{
+	background-color: #fff;
+}
+.search input{
+	background: url(/assets/img/search.png) no-repeat center left 0.5rem;
+	height: 2rem;
+	border: 0.0625rem solid #d5d5d5;
+	padding-left: 2.5rem;
+	box-sizing: border-box;
+	font-size: 0.875rem;
+	width: 70%;
+	margin-right: 3%;
+}
+.search button{
+	background-color: #b70005;
+	color: #fff;
+	font-size: 0.875rem;
+	height: 2rem;
+	border: 0;
+	width: 13%;
+}
+.search button:active ,.table table tr td button:active{
+	background: rgba(183,0,5,0.5);
+}
+.listcontent{
+    padding: 0.75rem 0 0.75rem 1.375rem;
+}
+.table{
+	width: 78%;
+	margin: 1.5rem auto 0;
+}
+.table table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.table table tr td{
+	text-align: center;
+}
+.table tr td:nth-child(1){
+	width: 8%;
+}
+.table tr td:nth-child(2){
+	width: 14%;
+}
+.table tr td:nth-child(3){
+	width: 21%;
+}
+.table tr td:nth-child(4){
+	width: 32%;
+}
+.table tr td:nth-child(5){
+	width: 25%;
+}
+.table table tr td{
+	border-right: 0.0625rem solid #bdbdbd;
+	font-size: 0.875rem;
+	color: #2d2d2d;
+}
+.table table tr th{
+	font-size: 0.875rem;
+	color: #2d2d2d;
+}
+.table table tr td:first-child{
+	border-left: 0.0625rem solid #bdbdbd;
+}
+.table table tr:nth-child(2){
+	border-top: 0.0625rem solid #bdbdbd;
+}
+.table table tr:last-child{
+	border-bottom: 0.0625rem solid #bdbdbd;
+}
+.table table tr:nth-child(odd){
+	background-color: #f1f1f1;
+}
+.table table tr:nth-child(odd):active{
+	background-color: #cbcbcb;
+}
+.table table tr:nth-child(even){
+	background-color: #fff;
+}
+.table table tr:nth-child(even):active{
+	background-color: rgba(255,255,255,0.5);
+}
+.table table tr td button{
+	color: #fff;
+	font-weight: bold;
+	width: 50%;
+	height: 1.5rem;
+	background-color: #b70005;
+	border: 0;
+}
+.M-box3{
+	text-align: center;
+	margin-top: 1rem;
+}
+.M-box3 a{
+	background-color: #fff;
+	color: #3f70b5;
+	text-decoration: none;
+}
+.M-box3 a,.M-box3 span{
+	padding:0 1rem;
+	height: 2rem;
+	line-height: 2rem;
+	display: inline-block;
+	border-right: 0.0625rem solid #e4e4e4;
+	border-top: 0.0625rem solid #e4e4e4;
+	border-bottom: 0.0625rem solid #e4e4e4;
+	vertical-align: top;
+}
+.M-box3 span{
+	line-height: 1.5rem;
+}
+.M-box3 .active{
+	background-color: #e4e4e4;
+	line-height: 2rem;
+}
+.M-box3 input{
+	height: 2rem;
+	border: 0.0625rem solid #e4e4e4;
+	margin: 0 0.5rem;
+	background-color: #f1f1f1;
+	padding-left: 0.5rem;
+	width: 5rem;
+	box-shadow: inset 1px 1px 8px #b5b3b3;
+}

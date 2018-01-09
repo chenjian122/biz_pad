@@ -1,0 +1,213 @@
+<div class="content">
+  <p class="name name-img">
+    <span>{{contact.contactName}}</span>
+  </p>
+  <div class="form">
+    <div class="row exhibition">
+      <div class="col">
+        <p>联系方式：</p>
+        <p>
+          <span>{{contact.phoneNum}}</span>
+          <span>（手机）</span>
+        </p>
+      </div>
+      <div class="col">
+        <p>类别：</p>
+        <p>注册公司</p>
+      </div>
+      <div class="col">
+        <p>负责人：</p>
+        <p>{{opportunity.bizUserName}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="tab">
+      <div class="tab-title">
+        <div class="active">注册公司</div>
+      </div>
+      <div class="tab-content">
+        <div class="active form-row">
+          <div class="row operation">
+            <div class="col">
+              <div class="left left-4">主营行业</div>
+              <div class="right-4">
+                <nz-select
+                  style="width: 100%" nzTags [nzPlaceHolder]="'请选择主营行业'" [(ngModel)]="bizProductSearch.p1"
+                  (ngModelChange)="searchChange($event)" [nzNotFoundContent]="'无法找到'" [nzShowSearch]="true" >
+                  <nz-option
+                    *ngFor="let option of industrys"
+                    [nzLabel]="option.industryName"
+                    [nzValue]="option.industryCode">
+                  </nz-option>
+                </nz-select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="left left-4">注册区域</div>
+              <div class="right-4">
+                <nz-select
+                style="width: 100%" nzTags [nzPlaceHolder]="'请选择注册区域'" [(ngModel)]="bizProductSearch.p10"
+                [nzNotFoundContent]="'无法找到'" [nzShowSearch]="true" >
+                <nz-option
+                  *ngFor="let option of parks"
+                  [nzLabel]="option.parkName"
+                  [nzValue]="option.parkCode">
+                </nz-option>
+              </nz-select>
+              </div>
+            </div>
+          </div>
+          <div class="row full">
+            <div class="col">
+              <div class="left left-4">主营范围</div>
+              <div class="right-4">
+                <nz-select
+                style="width: 100%" nzTags [nzPlaceHolder]="'请选择主营范围'" [(ngModel)]="bizProductSearch.p2"
+                (ngModelChange)="getPermitByBusinessScope($event)" [nzNotFoundContent]="'无法找到'" [nzShowSearch]="true" >
+                <nz-option
+                  *ngFor="let option of businessScopes"
+                  [nzLabel]="option.scopeName"
+                  [nzValue]="option.scopeCode">
+                </nz-option>
+              </nz-select>
+              </div>
+            </div>
+          </div>
+          <div class="row full">
+            <div class="col">
+              <div class="left left-7">行业资质许可证</div>
+              <div class="right-7">
+                <nz-select
+                style="width: 100%" nzTags [nzPlaceHolder]="'请选择许可证'" [(ngModel)]="bizProductSearch.p16"
+                [nzNotFoundContent]="'无法找到'" [nzShowSearch]="true" >
+                <nz-option
+                  *ngFor="let option of permits"
+                  [nzLabel]="option.permitName"
+                  [nzValue]="option.permitCode">
+                </nz-option>
+                </nz-select>
+              </div>
+            </div>
+          </div>
+          <div class="row operation">
+            <div class="col">
+              <div class="left left-4">企业类别</div>
+              <div class="right-4">
+                <nz-select
+                style="width: 100%" nzTags [nzPlaceHolder]="'请选择企业类别'" [(ngModel)]="bizProductSearch.p4"
+                 [nzNotFoundContent]="'无法找到'" [nzShowSearch]="true" >
+                <nz-option
+                  *ngFor="let option of companyKinds"
+                  [nzLabel]="option.valueName"
+                  [nzValue]="option.valueCode">
+                </nz-option>
+                </nz-select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="left left-4">组织形式</div>
+              <div class="right-4">
+                <nz-select
+                style="width: 100%" nzTags [nzPlaceHolder]="'请选择组织形式'" [(ngModel)]="bizProductSearch.p25"
+                 [nzNotFoundContent]="'无法找到'" [nzShowSearch]="true" >
+                <nz-option
+                  *ngFor="let option of companySuffixTypes"
+                  [nzLabel]="option.valueName"
+                  [nzValue]="option.valueCode">
+                </nz-option>
+                </nz-select>
+              </div>
+            </div>
+          </div>
+          <div class="row operation">
+            <div class="col">
+              <div class="left left-9">有效年营业额（万）</div>
+              <div class="right-9">
+                <nz-input-number style="width: 100%" [(ngModel)]="bizProductSearch.p7" [nzPlaceHolder]="'请输入有效年营业额'" [nzMin]="0" [nzStep]="0.1"></nz-input-number>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="scheme">推荐方案</div>
+    </div>
+  </div>
+</div>
+<div class="content onecontent">
+  <p class="name book-img">
+    <span>方案内容</span>
+  </p>
+  <p class="provide-service">
+    <span class="provide">我方提供服务：</span>
+    <span class="adress">崇明注册</span>
+  </p>
+  <div class="technol">
+    <img src="/assets/img/technological-process-one.jpg" />
+  </div>
+  <p class="provide-service adress-icon">
+    <span class="provide">注册地要求</span>
+  </p>
+  <div class="technol">
+    <img src="/assets/img/technological-process-two.jpg" />
+  </div>
+</div>
+<div class="content twocontent form-row">
+  <div class="row operation">
+    <div class="col">
+      <div class="left left-5">客户签订人</div>
+      <div class="right-5">
+        <nz-select
+        style="width: 100%" nzTags [nzPlaceHolder]="'请选择客户签订人'" [(ngModel)]="contract.custRepresentative"
+         [nzNotFoundContent]="'无法找到'" [nzShowSearch]="true" >
+        <nz-option
+          *ngFor="let option of customerContacts"
+          [nzLabel]="option.contactName"
+          [nzValue]="option.contactId">
+        </nz-option>
+        </nz-select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="left left-5">服务公司</div>
+      <div class="right-5">
+        <nz-select
+        style="width: 100%" nzTags [nzPlaceHolder]="'请选择客户签订人'" [(ngModel)]="contract.hostCompanyId"
+         [nzNotFoundContent]="'无法找到'" [nzShowSearch]="true" >
+        <nz-option
+          *ngFor="let option of companys"
+          [nzLabel]="option.companyName"
+          [nzValue]="option.companyId">
+        </nz-option>
+        </nz-select>
+      </div>
+    </div>
+  </div>
+  <div class="row operation">
+    <div class="col">
+      <div class="left left-5">我方签订人</div>
+      <div class="right-5">
+        <nz-input style="width: 100%" [(ngModel)]="signName" [nzDisabled] = true></nz-input>
+      </div>
+    </div>
+  </div>
+  <div class="row text-box">
+    <div class="col">
+      <div class="left">合同备注</div>
+    </div>
+    <div class="col">
+      <div class="textarea-div">
+        <nz-input [(ngModel)]="contract.remark" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="''"></nz-input>
+      </div>
+    </div>
+  </div>
+  <div class="btn-div">
+    <!-- <div class="left-btn">合同预览</div> -->
+    <div class="right-btn">
+      <!-- <button>打印</button> -->
+      <button (click)="signed()">签订</button>
+    </div>
+  </div>
+</div>
