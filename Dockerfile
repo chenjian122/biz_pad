@@ -1,6 +1,6 @@
 FROM node:6.9.5
 
-RUN git clone https://github.com/chenjian122/biz_pad.git /var/www \
+RUN git clone https://github.com/akveo/ng2-admin.git /var/www \
     && cd /var/www \
     && npm install --global rimraf \
     && npm run clean \
@@ -8,7 +8,7 @@ RUN git clone https://github.com/chenjian122/biz_pad.git /var/www \
     && npm install \
     && npm run build:prod:aot
 
-EXPOSE 8080
+EXPOSE 4200
 
 WORKDIR /var/www
 ENTRYPOINT ["npm", "run", "start:prod"]

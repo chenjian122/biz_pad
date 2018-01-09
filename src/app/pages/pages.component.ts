@@ -4,6 +4,7 @@ import { Routes } from '@angular/router';
 import {CONSTANTS} from "../app.const";
 import {UserService} from "../services/user.service";
 import {User} from "../models/user";
+import {AuthenticationService} from "../services/authentication.service";
 
 @Component({
   selector: 'pages',
@@ -29,12 +30,14 @@ import {User} from "../models/user";
 })
 export class Pages {
 
-  constructor(private userService:UserService ) {
+  constructor(private userService:UserService,private authenticationService:AuthenticationService ) {
   }
   ngOnInit() {
     
-    
 
+  }
 
+  public signOut(){
+    this.authenticationService.logout();
   }
 }

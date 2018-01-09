@@ -1,9 +1,9 @@
 export class Contact {
     
-    private contactId:number;
+    contactId:number;
     
-    private contactName:String;
+    contactName:String;
     
-    private phoneNum:String;
+    phoneNum:String;
 
 }
