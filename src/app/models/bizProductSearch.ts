@@ -28,4 +28,5 @@ export class BizProductSearch{
   p24:String;
   p25:String;
   p26:String;
+  bizProductSearch:String;
 }
