@@ -70,7 +70,7 @@
                   [nzLabel]="option.scopeName"
                   [nzValue]="option.scopeCode">
                 </nz-option>
-              </nz-select>
+              </nz-select> 
               </div>
             </div>
           </div>
@@ -132,17 +132,17 @@
       </div>
     </div>
     <div>
-      <div class="scheme">推荐方案</div>
+      <div class="scheme">注册流程</div>
     </div>
   </div>
 </div>
 <div class="content onecontent">
   <p class="name book-img">
-    <span>方案内容</span>
+    <span>服务内容</span>
   </p>
   <p class="provide-service">
-    <span class="provide">我方提供服务：</span>
-    <span class="adress">崇明注册</span>
+    <span class="provide">{{bizProductSearch.myselfAddress}}：</span>
+    <span class="adress">{{area}}注册</span>
   </p>
   <div class="technol">
     <img src="/assets/img/technological-process-one.jpg" />
@@ -207,7 +207,7 @@
     <!-- <div class="left-btn">合同预览</div> -->
     <div class="right-btn">
       <!-- <button>打印</button> -->
-      <button (click)="signed()">签订</button>
+      <button (click)="signed()">保存</button>
     </div>
   </div>
 </div>

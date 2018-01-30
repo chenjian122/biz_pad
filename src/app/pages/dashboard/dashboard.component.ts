@@ -4,6 +4,8 @@ import {Opportunity} from '../../models/opportunity'
 import {OpportunityService} from "../../services/opportunity.service";
 import {AuthenticationService} from "../../services/authentication.service";
 import {NzMessageService} from "ng-zorro-antd";
+import {UserService} from "../../services/user.service";
+import {User} from "../../models/user";
 
 @Component({
   selector: 'dashboard',
@@ -18,12 +20,22 @@ export class Dashboard implements OnInit {
   _dataSet = [];
   _loading = true;
   search_content = "";
-  constructor(private router: Router,private opportunityService: OpportunityService,private _message: NzMessageService,private authenticationService:AuthenticationService) {
+  user:User;
+  constructor(private userService:UserService,private router: Router,private opportunityService: OpportunityService,private _message: NzMessageService,private authenticationService:AuthenticationService) {
 
   }
 
   ngOnInit() {
-    this.getPageData();
+   
+
+    this.userService.getLoginUser().then(
+      res => {
+        if(res.success){
+          this.user = res.data;
+          this.getPageData();
+        }
+      }
+    )
   }
 
   getPageData(reset = false) {
@@ -35,6 +47,7 @@ export class Dashboard implements OnInit {
     opportunity.page = this._current - 1;
     opportunity.size = this._pageSize;
     opportunity.search = this.search_content;
+    opportunity.loginUserId = this.user.userId
     this._loading = true;
     this.opportunityService.page(opportunity).then(
       res => {

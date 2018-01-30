@@ -39,6 +39,7 @@ export class ConsultComponent implements OnInit {
   companys;
   customerId:number;
   user:User;
+  area:String;
 
   constructor(private userService:UserService,private route:ActivatedRoute,private consultService: ConsultService,private _message: NzMessageService,private authenticationService:AuthenticationService) {
     
@@ -60,6 +61,7 @@ export class ConsultComponent implements OnInit {
       res => {
         if (res.success) {
           this.createMessage("success","签订成功");
+          this.getOpportunityInfoById(this.bizId);
         }else{
           this.createMessage("error",res.msg);
         }
@@ -118,24 +120,39 @@ export class ConsultComponent implements OnInit {
   searchChange(e){
     this.listBusinessScopeByIndustryCode();
   }
+
+  getOpportunityInfoById(bizId){
+    this.consultService.getOpportunityInfoById(this.bizId).then(
+      res => {
+        if (res.success) {
+          const data = res.data;
+          this.contact = data.contactDto;
+          this.opportunity = data.opportunityDto
+          this.bizProductSearch = data.bizProductSearchDto;
+          if(data.contractDto != null){
+            this.contract = data.contractDto;
+          }
+          var keepGoing = true;
+          if(this.bizProductSearch.p10 != null){
+            this.parks.forEach(element =>{
+              if(keepGoing) {
+                if(element.parkCode == this.bizProductSearch.p10){
+                  this.area = element.parkName;
+                  keepGoing = false;
+                }
+              }
+            })
+          }
+          this.listBusinessScopeByIndustryCode();
+        }
+      }
+    );
+  }
  
   ngOnInit() {
     this.route.queryParams.subscribe(queryParams => {
       this.bizId = queryParams.bizId;
-      this.consultService.getOpportunityInfoById(this.bizId).then(
-        res => {
-          if (res.success) {
-            const data = res.data;
-            this.contact = data.contactDto;
-            this.opportunity = data.opportunityDto
-            this.bizProductSearch = data.bizProductSearchDto;
-            if(data.contractDto != null){
-              this.contract = data.contractDto;
-            }
-            this.listBusinessScopeByIndustryCode();
-          }
-        }
-      );
+      this.getOpportunityInfoById(this.bizId);
     });
 
     this.consultService.listIndustry().then(
