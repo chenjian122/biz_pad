@@ -1,7 +1,7 @@
 
 {
   "**": {
-      "target":"http://172.30.29.129:8070",
+      "target":"http://svn01.52bzs.net:8070",
       "secure": false
     }
 }
